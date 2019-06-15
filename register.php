@@ -1,3 +1,41 @@
+<?php
+
+    function sanitizeFormString($inputText) {
+        $inputText = strip_tags($inputText);
+        $inputText = str_replace(" ","",$inputText);
+        return $inputText;
+    }
+
+    function sanitizeFormUsername($inputText) {
+        $inputText = strip_tags($inputText);
+        $inputText = str_replace(" ","",$inputText);
+        $inputText = ucfirst(strtolower($inputText));
+        return $inputText;
+    }
+
+    function sanitizeFormPassword($inputText) {
+        $inputText = strip_tags($inputText);
+        return $inputText;
+    }
+
+    if(isset($_POST['loginButton'])){
+        // echo "Login Button Clicked";
+        $username= $_POST['username'];
+        echo $username;
+    }
+
+    if(isset($_POST['registerButton'])){
+        // echo "Register Button Clicked";
+        $username = sanitizeFormString($_POST['registerUsername']);
+        $firstName = sanitizeFormUsername($_POST['firstName']);
+        $lastName = sanitizeFormUsername($_POST['lastName']);
+        $email = sanitizeFormString($_POST['email']);
+        $password = sanitizeFormPassword($_POST['registerPassword']);
+        $password2 = sanitizeFormPassword($_POST['confirmPassword']);
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +62,46 @@
                 <span id="showRegister"> Don't have a account yet? Click here to have one!</span>
             </div>
         </form>
+
+
+        <form id="registerForm" action="register.php" method="POST">
+                    <h2>Register Here</h2>
+                    <p>
+                      
+                        <label for="registerUsername">User Name</label>
+                        <input id="registerUsername" name="registerUsername" placeholder="e.g Sean Chan" type="text" required>
+                    </p>
+
+                    <p>
+                        <label for="firstName">First Name</label>
+                        <input id="firstName" name="firstName" placeholder="e.g sean" type="text"  required>
+                    </p>
+
+                    <p>
+                        <label for="lastName">Last Name</label>
+                        <input id="lastName" name="lastName" type="text" placeholder="e.g chan"  required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="simonchan@gmail.com"  required>
+                    </p>
+
+                    <p>
+                        <label for="registerPassword">Password</label>
+                        <input id="registerPassword" name="registerPassword" placeholder="Enter your password here" type="password"  required>
+                    </p>
+
+                    <p>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input id="confirmPassword" name="confirmPassword" placeholder="Please enter the password again" type="password"  required>
+
+                    </p>
+                    <button type="submit" name="registerButton">Register Now</button>
+                    <div class="hasAccountText">
+                        <span id="hideRegister"> Already have an account? Login here!</span>
+                    </div>
+                </form>
     </div>
 
 </body>
