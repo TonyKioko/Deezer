@@ -3,8 +3,12 @@
     class Account {
 
         private $errorArray;
+        private $con;
 
-        public function __construct (){
+
+        public function __construct ($con){
+           $this->con = $con;
+
            $this->errorArray = array();
 
 
@@ -32,6 +36,15 @@
             return "<span class='errorMessage'>$error</span>";
         }
 
+        private function insertUserDetails($un,$fn,$ln,$em,$pw) {
+            $encryptedPw = md5($pw);
+            $profileImg = "assets/images/profile-pics/user.png";
+            $date = date("Y-m-d");
+            $query = "INSERT INTO users VALUES ('','$un','$fn','$ln','$em','$encryptedPw','$date','$profileImg')";
+            $result = mysqli_query($this->con, $query);
+
+            return $result;
+        }
         private function validateUsername($un){
             // echo "validating username";
             if(strlen($un) > 25 || strlen($un) < 5){
