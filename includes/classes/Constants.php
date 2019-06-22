@@ -11,6 +11,6 @@ class Constants {
     Public static $invalidEmail = "Email is invalid.";
     Public static $existedUsername = "This username has been registered.";
     Public static $existedEmail = "This Email address has been registered.";
-    Public static $loginFailed = "Wrong user name or password.";
+    Public static $loginFailed = "Incorrect username or password.";
 }
 ?>

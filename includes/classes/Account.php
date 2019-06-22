@@ -13,6 +13,24 @@
 
 
         }
+        public function login ($un,$pw) {
+            $encryptedPw = md5($pw);
+            $query = "SELECT * FROM users WHERE username = '$un'AND password = '$encryptedPw'";
+
+            $CheckUsernameExist = mysqli_query($this->con, $query);
+
+            if (mysqli_num_rows($CheckUsernameExist) == 1){
+                return true;
+            }
+            else {
+                array_push($this->errorArray,Constants::$loginFailed);
+                return false;
+            }
+
+
+
+
+        }
         public function register($un,$fn,$ln,$em,$pw,$pw2){
             $this->validateUsername($un);
             $this->validatefname($fn);
