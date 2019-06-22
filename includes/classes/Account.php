@@ -21,7 +21,7 @@
             $this->validatePasswords($pw,$pw2);
 
             if (empty($this->errorArray)){
-                return true;
+                return $this->insertUserDetails($un,$fn,$ln,$em,$pw);
             } else {
                 return false;
 
@@ -51,6 +51,12 @@
                 array_push($this->errorArray,Constants::$invalidUsername);
                 return;
             }
+            $query = "SELECT username FROM users WHERE username = '$un'";
+            $checkUsernameQuery = mysqli_query($this->con,$query);
+            if (mysqli_num_rows($checkUsernameQuery) != 0 ){
+                array_push($this->errorArray, Constants::$existedUsername);
+                return;
+            }
         }
         private function validatefname($fn){
             if(strlen($fn) > 25 || strlen($fn) < 2){
@@ -69,6 +75,12 @@
         private function validateEmail($em){
             if(!filter_var($em,FILTER_VALIDATE_EMAIL)){
                 array_push($this->errorArray,Constants::$invalidEmail);
+                return;
+            }
+            $query = "SELECT email FROM users WHERE email = '$em'";
+            $checkEmailQuery = mysqli_query($this->con,$query);
+            if (mysqli_num_rows($checkEmailQuery) != 0 ){
+                array_push($this->errorArray, Constants::$existedEmail);
                 return;
             }
             

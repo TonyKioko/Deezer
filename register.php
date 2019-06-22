@@ -50,6 +50,7 @@
                     <h2>Register Here</h2>
                     <p>
                         <?php echo $account->getError(Constants::$invalidUsername); ?>
+                        <?php echo $account->getError(Constants::$existedUsername); ?>
 
                         <label for="registerUsername">User Name</label>
                         <input id="registerUsername" name="registerUsername" placeholder="e.g Sean Chan" type="text" required
@@ -73,6 +74,7 @@
 
                     <p>
                         <?php echo $account->getError(Constants::$invalidEmail); ?>
+                        <?php echo $account->getError(Constants::$existedEmail); ?>
 
                         <label for="email">Email</label>
                         <input id="email" name="email" type="email" placeholder="simonchan@gmail.com" value="<?php getInputValue('email'); ?>"  required>
