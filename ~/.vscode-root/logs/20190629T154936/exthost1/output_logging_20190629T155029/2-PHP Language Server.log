@@ -1,0 +1,22 @@
+DEBUG     Checking PHPLS_ALLOW_XDEBUG
+DEBUG     The xdebug extension is not loaded
+
+[Info  - 3:50:30 PM] 7 files total
+[Info  - 3:50:30 PM] Indexing project for definitions and static references
+Parsing file:///opt/lampp/htdocs/Spotify/index.php
+Parsing file:///opt/lampp/htdocs/Spotify/includes/handlers/register-handler.php
+Parsing file:///opt/lampp/htdocs/Spotify/includes/handlers/login-handler.php
+Parsing file:///opt/lampp/htdocs/Spotify/includes/classes/Account.php
+Parsing file:///opt/lampp/htdocs/Spotify/includes/classes/Constants.php
+Parsing file:///opt/lampp/htdocs/Spotify/includes/config.php
+Parsing file:///opt/lampp/htdocs/Spotify/register.php
+[Info  - 3:50:30 PM] Indexing project for dynamic references
+Parsing file:///opt/lampp/htdocs/Spotify/index.php
+Parsing file:///opt/lampp/htdocs/Spotify/includes/handlers/register-handler.php
+Parsing file:///opt/lampp/htdocs/Spotify/includes/handlers/login-handler.php
+Parsing file:///opt/lampp/htdocs/Spotify/includes/classes/Account.php
+Parsing file:///opt/lampp/htdocs/Spotify/includes/classes/Constants.php
+Parsing file:///opt/lampp/htdocs/Spotify/includes/config.php
+Parsing file:///opt/lampp/htdocs/Spotify/register.php
+[Info  - 3:50:30 PM] 0 Packages
+[Info  - 3:50:30 PM] All 7 PHP files parsed in 0 seconds. 148 MiB allocated.

@@ -1,0 +1,11 @@
+[Info  - 4:19:46 PM] ESLint server stopped.
+[Info  - 4:19:48 PM] ESLint server running in node v10.2.0
+[Info  - 4:19:48 PM] ESLint server is running.
+[Info  - 4:19:50 PM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/Spotify/assets/js/register.js
+
+To use ESLint please install eslint by running npm install eslint in the workspace folder Spotify
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn or pnpm instead of npm set the setting `eslint.packageManager` to either `yarn` or `pnpm`
+Alternatively you can disable ESLint for the workspace folder Spotify by executing the 'Disable ESLint' command.

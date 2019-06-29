@@ -25,9 +25,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    
+    <link rel="stylesheet" type="text/css" href="assets/assets/register.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/register.js"></script>
+
+
 </head>
 <body>
-    
+<div id="background">
+    <div id="loginContainer">
+
     <div id="inputContainer">
         <form id="loginForm" action="register.php" method="POST">
             <h2>Login Here</h2>
@@ -101,6 +109,9 @@
                     </div>
                 </form>
     </div>
+    </div>
+
+</div>
 
 </body>
 </html>
