@@ -108,7 +108,16 @@
                         <span id="hideRegister"> Already have an account? Login here!</span>
                     </div>
                 </form>
-    </div>
+        </div>
+            <div id="loginText">
+                <h1>Get great music, right now.</h1>
+                <h2>Listen to loads of songs for free.</h2>
+                <ul>
+                    <li>Discover music for you.</li>
+                    <li>Follow artists to keep in date.</li>
+                </ul>
+
+            </div>
     </div>
 
 </div>

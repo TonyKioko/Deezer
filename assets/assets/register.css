@@ -89,3 +89,32 @@ input[type="email"]{
 .hasAccountText {
     text-align: center;
 }
+#registerForm,#loginForm{
+    /* display: none; */
+}
+
+.hasAccountText span:hover {
+    cursor: pointer;
+}
+
+#registerForm {
+    margin-top: 0px;
+}
+
+#loginText {
+    display: table-cell;
+    padding: 45px;
+}
+
+#loginText h1{
+    color: #1db954!important;
+    font-size: 60px;
+    font-weight: bold;
+    margin:0px;
+}
+#loginText h2{
+    font-family: "Helvetica Neue";
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
